@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --text-color:#FFFFFF ;
+    --linear-gradiant:#000000, #00000000;
+}
+/* start header */
+body{
+    background-color: #000000;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+.grid{
+    display: grid;
+    max-height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(10,1fr);
+}
+nav {
+    grid-column: 1/2;
+    height: 100vh;
+    /* width: 110px; */
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+ul li{
+    color: white;
+    position: relative;
+}
+ul li:nth-child(2):before{
+    position: absolute;
+    content: "";
+    bottom: -8px;
+    width: 100%;
+    height: 4px;
+    background-color: #D40000;
+}
+ul li i{
+    font-size: 25px;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+}
+ul li i:not(.fa-house):hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    color: #E0115F;
+}
+
+
+/* start main */
+main{
+    grid-column: 2/11;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 40px 1fr;
+    max-height: 100vh;
+}
+.film{
+    grid-column: 1/2;
+    grid-row:1/2 ;
+    position: relative;
+    
+}
+.film img{
+    position: relative;
+    left: -22px;
+    z-index: -11;
+}
+.film::before{
+    position: absolute;
+    content: "";
+    background: linear-gradient(89deg, rgba(0, 0, 0, 0.80) 24.06%, rgba(0, 0, 0, 0.00) 99.24%);
+    height: 100%;
+    width: 142px;
+    right: -116px;
+    z-index: 99;
+
+}
+.film .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* gap: 10px; */
+    gap: 35px;
+}
+.film .btn a{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 47px;
+    /* width: 124.6px; */
+    width: 145px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.red{
+    background: #D40000;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+}
+.red:hover{
+    background-color: #E0115F;
+    opacity: 0.8;
+}
+.white{
+    background: #D9D9D9;
+    color: black !important;
+    transition: all 0.6s ;
+    -webkit-transition: all 0.6s ;
+    -moz-transition: all 0.6s ;
+    -ms-transition: all 0.6s ;
+    -o-transition: all 0.6s ;
+    
+}
+.white:hover{
+    background-color: #ECF3F9;
+    opacity: 0.8;
+}
+picture{
+    grid-column: 2/4;
+    grid-row:1/3 ;
+    background-image: url(./img/1366_2000\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+}
+picture::after{
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 240%;
+    background: linear-gradient(89deg, rgba(0, 0, 0, 0.80) 24.06%, rgba(0, 0, 0, 0.00) 99.24%);
+    z-index: 222;
+    rotate: 270deg;
+    left: 270px;
+    bottom: -370px;
+}
+
+
+.netflix{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    left: 50px;
+    top: 50px;
+}
+.netflix .img{
+    background: url(./img/netflix.png), rgb(17, 17, 17) 50% / cover no-repeat;
+    width: 15.175px;
+    height: 25px;
+}
+.netflix h5{
+    text-transform: uppercase;
+    color: #B9BBB9;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 10px;
+}
+.imdp{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    left: 30px;
+    /* top: 50px; */
+    bottom: 90px;
+}
+.imdp .img{
+    width: 32px;
+    height: 18px;
+    background: url(./img/imdp.png), lightgray 50% / cover no-repeat;
+}
+.stream{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    left: 30px;
+    /* top: 50px; */
+    bottom: 60px;
+
+}
+.stream span{
+    color: #D40000;
+}
+.stream p{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* end main */
+/* start sectoion */
+section{
+    grid-column:1/4 ;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(7,1fr) 80px;
+    grid-template-rows:1fr 60px;
+    /* margin-left: 40px; */
+    overflow: hidden;
+    
+}
+section img{
+    overflow: hidden;
+    max-width: 100%;
+    transition: transform 0.3s ease-in;
+    -webkit-transition: transform 0.3s ease-in;
+    -moz-transition: transform 0.3s ease-in;
+    -ms-transition: transform 0.3s ease-in;
+    -o-transition: transform 0.3s ease-in;
+}
+section .img{
+    grid-row: 1/2;
+    overflow: hidden;
+    width: 145px;
+    height: 207px;
+}
+.img:hover img{
+    transform: scale(1.1) rotate(5deg);
+    -webkit-transform: scale(1.1) rotate(5deg);
+    -moz-transform: scale(1.1) rotate(5deg);
+    -ms-transform: scale(1.1) rotate(5deg);
+    -o-transform: scale(1.1) rotate(5deg);
+}
+h1{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    /* margin-left: 40px; */
+}
+.tranding{
+    grid-column: span 8 ;
+    grid-row: 2/3;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* end section */
